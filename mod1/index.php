@@ -131,4 +131,3 @@ $object = new tx_bwbackendsite_module1();
 $object->init();
 $object->main();
 $object->printContent();
-
