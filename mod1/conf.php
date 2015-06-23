@@ -11,4 +11,3 @@ $MCONF['access'] = 'user,group';
 $MLANG['default']['tabs_images']['tab'] = 'moduleicon.gif';
 $MLANG['default']['ll_ref'] = 'LLL:EXT:bw_backendsite/mod1/locallang_mod.xml';
 
-?>
