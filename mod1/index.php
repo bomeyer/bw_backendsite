@@ -39,28 +39,31 @@
  *
  */
 
-$LANG->includeLLFile('EXT:bw_backendsite/mod1/locallang.xml');
-//require_once(PATH_t3lib . 'class.t3lib_scbase.php');
-$BE_USER->modAccess($MCONF,1);	// This checks permissions and exits if the users has no permission for entry.
-	// DEFAULT initialization of a module [END]
-
+use TYPO3\CMS\Backend\Module\BaseScriptClass;
+use TYPO3\CMS\Backend\Utility\BackendUtility;
 
 
 /**
- * Module 'BW Real Estate' for the 'bw_realestate' extension.
+ * Module 'BW Backendsite' for the 'bw_backendsite' extension.
  *
  * @author	Mark Boland <mark.boland@boland.de>
  * @package	TYPO3
- * @subpackage	tx_bwrealestate
+ * @subpackage	tx_bwbackendsite
  */
-class  tx_bwbackendsite_module1 extends t3lib_SCbase {
-	var $pageinfo;
-	var $storagePid;
-	var $singlePID;
-	var $downloadPID;
-	var $typeNum;
+class  tx_bwbackendsite_module1 extends TYPO3\CMS\Backend\Module\BaseScriptClass {
+	/**
+	 * @var array
+	 */
+	protected $pageinfo;
+	
 	var $backPath;
 	var $TSconfig;
+
+	/**
+	 * @var \TYPO3\CMS\Core\Authentication\BackendUserAuthentication
+	 */
+	protected $backendUser;
+
 
 	/**
 	* Initializes the Module
@@ -72,30 +75,12 @@ class  tx_bwbackendsite_module1 extends t3lib_SCbase {
 
 		parent::init();
 		
-		$this->extconf = unserialize($TYPO3_CONF_VARS['EXT']['extConf']['bw_backendsite']); // , , 
+		$this->extconf = unserialize($TYPO3_CONF_VARS['EXT']['extConf']['bw_backendsite']);
 		$this->url = dirname(dirname($_SERVER['PHP_SELF']));	// ../typo3
 		
 		$this->backPath = '../typo3/';
+		$this->backendUser = $GLOBALS['BE_USER'];
 
-	}
-
-	/**
-	* Adds items to the ->MOD_MENU array. Used for the function menu selector.
-	*
-	* @return	void
-	*/
-	function menuConfig()	{
-		global $LANG;
-		$this->MOD_MENU = Array (
-			'function' => Array (
-				'1' => $LANG->getLL('mode.list'),
-				'2' => $LANG->getLL('mode.references'),
-				'3' => $LANG->getLL('mode.hidden'),
-				'4' => $LANG->getLL('mode.import'),
-			/*	'5' => $LANG->getLL('mode.maintainence'), */
-			)
-		);
-		parent::menuConfig();
 	}
 
 	/**
@@ -107,14 +92,26 @@ class  tx_bwbackendsite_module1 extends t3lib_SCbase {
 	function main()	{
 		global $BE_USER, $LANG, $BACK_PATH, $TCA_DESCR, $TCA, $CLIENT, $TYPO3_CONF_VARS;
 
-		// Access check!
-		// The page will show only if there is a valid page and if this page may be viewed by the user
-		$this->pageinfo = t3lib_BEfunc::readPageAccess($this->id, $this->perms_clause);
-		$access = is_array($this->pageinfo) ? 1 : 0;
-
-		header('Location: '.$this->url.'?id='.$this->extconf['pageID']);
 		
-		//$this->content = '<iframe style="width=100%;height=100%" src="'.$_SERVER['PHP_SELF'].'" />'.chr(10);
+		$id = $this->backendUser->userTS['plugin.']['tx_bwbackendsite.']['pageID']?$this->backendUser->userTS['plugin.']['tx_bwbackendsite.']['pageID']:$this->extconf['pageID'];
+
+		if (intval($id) || !$id) {
+			$id = $id?intval($id):1;
+			// Access check!
+			// The page will show only if there is a valid page and if this page may be viewed by the user
+			//$this->pageinfo = t3lib_BEfunc::readPageAccess($this->id, $this->perms_clause);
+			$this->pageinfo = BackendUtility::readPageAccess(intval($id), $this->perms-clause);
+			$access = is_array($this->pageinfo);
+			if ($access || $this->backendUser->user['admin'])
+				header('Location: '.$this->url.'index.php?id='.$id);
+			else
+				$this->content = 'You have no access to the preconfigured page. Please contact the administrator.';
+		} elseif (preg_match('/^https?:\/\//', $id)) {
+			$this->content = 'valid website url:'.$id;
+			header('Location: '.$id);
+		} else
+			$this->content = 'The preconfigured page is not a valid web address. Please contact the administrator.';
+		
 		return;
 		
 	}
@@ -126,28 +123,11 @@ class  tx_bwbackendsite_module1 extends t3lib_SCbase {
 	*/
 	function printContent()	{
 
-	//	$this->content .= $this->doc->endPage();
 		echo $this->content;
 	}
 }
 
-
-
-if (defined('TYPO3_MODE') && $TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/bw_backendsite/mod1/index.php'])	{
-	include_once($TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/bw_backendsite/mod1/index.php']);
-}
-
-
-
-
-// Make instance:
-$SOBE = t3lib_div::makeInstance('tx_bwbackendsite_module1');
-$SOBE->init();
-
-// Include files?
-foreach($SOBE->include_once as $INC_FILE)	include_once($INC_FILE);
-
-$SOBE->main();
-$SOBE->printContent();
-
-?>
+$object = new tx_bwbackendsite_module1();
+$object->init();
+$object->main();
+$object->printContent();
