@@ -38,18 +38,3 @@ access to the page, so this page tree must be mounted for them.
 
 		A sample page tree
 
-
-
-Configuration
-=======================
-
-Additionally, you may override settings with userTS.
-
-.. figure:: Images/AdministratorManual/userTS.png
-		:alt: User Typoscript override
-
-		Override in userTS (groupTS)
-
-
-* 
-
