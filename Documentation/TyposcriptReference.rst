@@ -185,11 +185,6 @@ userTS
 ------
 
 plugin.tx_bwbackendsite.<property>
-
-.. ..................................
-.. container:: table-row
-
-	Property
 		pageID
 
 	Data type
