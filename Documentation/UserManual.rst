@@ -1,23 +1,18 @@
-﻿============
+============
 Users manual
 ============
 
-Target group: **Editors**
 
-Your administrator has set the site you 
+Your administrator has set up the site you will see in the Backendsite menu.
 
-.. figure:: Images/UserManual/BackendView.png
-		:width: 500px
+.. figure:: Images/UserManual/user-bw_backendsite.png
 		:alt: Backend view
 
-		Default Backend view (caption of the image)
+		You find the menu item in your user menu on the page top
 
-		The Backend view of TYPO3 after the user has clicked on module "Page". (legend of the image)
+.. figure:: Images/UserManual/user-bw_backendsite-6_1.png
+		:alt: Backend view in 6.1
 
-FAQ
-====
+		In TYPO3 6.x you find the item in the main menu on the left
 
-Possible subsection: FAQ
 
-.. _User manual:
-.. _Introduction Package: http://demo.typo3.org/
