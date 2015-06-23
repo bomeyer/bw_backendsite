@@ -59,4 +59,3 @@ for setting a different page to display for each group or user.
 		:alt: User Typoscript override
 
 		Override in userTS (groupTS)
-
