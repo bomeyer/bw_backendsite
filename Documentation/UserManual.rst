@@ -9,4 +9,3 @@ Your administrator has set up the site you will see in the Backendsite menu.
 		:alt: Backend view
 
 		You find the menu item in your user menu on the page top
-
