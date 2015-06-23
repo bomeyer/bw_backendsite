@@ -2,9 +2,9 @@
 	...................................................
 	Hint: following expression |my_substition_value| will be replaced when rendering doc.
 
-.. |author| replace:: John Doe <john.doe@typo3.org>
-.. |extension_key| replace:: extension_key
-.. |extension_name| replace:: Extension Name
+.. |author| replace:: Mark Boland <mark.boland@boland.de>
+.. |extension_key| replace:: bw_backendsite
+.. |extension_name| replace:: Backendsite
 .. |typo3| image:: Images/Typo3.png
 .. |time| date:: %m-%d-%Y %H:%M
 
