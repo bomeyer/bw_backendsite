@@ -12,7 +12,7 @@
 $EM_CONF[$_EXTKEY] = array(
 	'title' => 'BW Backend Site',
 	'description' => 'Show part of the tree in the backend',
-	'category' => 'plugin',
+	'category' => 'backend',
 	'author' => 'Mark Boland',
 	'author_email' => 'mark.boland@boland.de',
 	'shy' => '',
