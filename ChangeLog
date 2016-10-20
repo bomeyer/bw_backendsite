@@ -1,9 +1,12 @@
+<<<<<<< HEAD
 2019-08-15 - Mark Boland <mark.boland@boland.de> - v1.1.0
 
 	* Compatible with 8.7 and 9.5
 	* Set of three modules, fully customizable
 
 
+=======
+>>>>>>> Module group setting added; compatible with 7LTS
 2016-10-20 - Mark Boland <mark.boland@boland.de> - v1.0.1
 
 	* Module group now configurable (user, tools, system, web)
