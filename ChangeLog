@@ -1,3 +1,14 @@
+2016-10-20 - Mark Boland <mark.boland@boland.de> - v1.0.1
+
+	* Module group now configurable (user, tools, system, web)
+	* Compatible with 7.6LTS without compatible6
+
+
+2015-06-25 - Mark Boland <mark.boland@boland.de> - v1.0.0
+
+	* Initial public release
+
+
 2013-03-13 - Mark Boland <mark.boland@boland.de> -
 
 	* Development started
