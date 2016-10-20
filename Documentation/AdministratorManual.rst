@@ -25,6 +25,11 @@ After installation you can edit the extension settings
 
 		Page URL as string
 
+* menu: Choose one of 'user', 'tools', 'system' or 'web'. Your module will be
+  shown in the section named. In TYPO3 7.6LTS and higher, 'user' will be shown
+  as a drop-down menu in the top bar which is not as visible as 'tools' or
+  'system'.
+  
 You may set up a separate page tree just for backend users. Users must have
 access to the page, so this page tree must be mounted for them.
 

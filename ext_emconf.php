@@ -12,7 +12,7 @@
 $EM_CONF[$_EXTKEY] = array(
 	'title' => 'BW Backend Site',
 	'description' => 'Show part of the tree in the backend',
-	'category' => 'plugin',
+	'category' => 'backend',
 	'author' => 'Mark Boland',
 	'author_email' => 'mark.boland@boland.de',
 	'shy' => '',
@@ -28,10 +28,10 @@ $EM_CONF[$_EXTKEY] = array(
 	'clearCacheOnLoad' => 0,
 	'lockType' => '',
 	'author_company' => '',
-	'version' => '1.0.0',
+	'version' => '1.0.1',
 	'constraints' => array(
 		'depends' => array(
-			'typo3' => '6.0.0-6.99.99'
+			'typo3' => '6.2.0-7.99.99'
 		),
 		'conflicts' => array(
 		),

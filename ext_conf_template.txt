@@ -1,5 +1,5 @@
 # cat=basic/basic/1; type=string; label=Starting page to show
 pageID = 1
 
-# cat=basic/basic/2; type=string; label=Custom Module label
-menuLabel = 
+# cat=basic/basic/3; type=string; label=Module group (user, tools, system, web)
+menu = user

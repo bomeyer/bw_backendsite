@@ -1,7 +1,9 @@
 <?php
 
+$myextconf = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['bw_backendsite']);
+
 	// DO NOT REMOVE OR CHANGE THESE 2 LINES:
-$MCONF['name'] = 'user_txbwbackendsiteM1';
+$MCONF['name'] = $myextconf['menu']?$myextconf['menu']:'user'.'_txbwbackendsiteM1';
 $MCONF['script'] = '_DISPATCH';
 	
 $MCONF['access'] = 'user,group';

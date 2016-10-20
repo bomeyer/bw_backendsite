@@ -2,7 +2,7 @@
 /***************************************************************
 *  Copyright notice
 *
-*  (c) 2015 Mark Boland <mark.boland@boland.de>
+*  (c) 2015, 2016 Mark Boland <mark.boland@boland.de>
 *  All rights reserved
 *
 *  This script is part of the TYPO3 project. The TYPO3 project is
