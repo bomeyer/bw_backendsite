@@ -13,8 +13,8 @@ Extension Name
 
 :Extension name: BW Backend Site
 :Extension key: bw_backendsite
-:Version: 1.0.1
-:Description: manuals covering TYPO3 extension "BW Backend Sit"
+:Version: 1.1.0
+:Description: manuals covering TYPO3 extension "BW Backend Site"
 :Language: en
 :Author: Mark Boland
 :Creation: 2015-06-23

@@ -1,5 +1,37 @@
-# cat=basic/basic/1; type=string; label=Starting page to show
+# cat=basic/module1/1; type=string; label=Starting page to show
 pageID = 1
 
-# cat=basic/basic/3; type=string; label=Module group (user, tools, system, web)
+# cat=basic/module1/2; type=string; label=Module group (user, help, tools, system, web or a custom one)
 menu = user
+
+# cat=basic/module1/3; type=string; label=Language file for this module
+locallang = LLL:EXT:bw_backendsite/Resources/Private/Language/locallang_mod1.xlf
+
+# cat=basic/module1/4; type=string; label=Icon to use
+icon = EXT:bw_backendsite/Resources/Public/Icons/icon-backendsite.svg
+
+
+# cat=mod2/module2/1; type=string; label=Starting page to show
+pageID_mod2 = 
+
+# cat=mod2/module2/2; type=string; label=Module group (user, help, tools, system, web or a custom one)
+menu_mod2 = help
+
+# cat=mod2/module2/3; type=string; label=Language file for this module
+locallang_mod2 = LLL:EXT:bw_backendsite/Resources/Private/Language/locallang_mod2.xlf
+
+# cat=mod2/module2/4; type=string; label=Icon to use
+icon_mod2 = EXT:bw_backendsite/Resources/Public/Icons/icon-help.svg
+
+
+# cat=mod3/module3/1; type=string; label=Starting page to show
+pageID_mod3 = 
+
+# cat=mod3/module3/2; type=string; label=Module group (user, help, tools, system, web or a custom one)
+menu_mod3 = tools
+
+# cat=mod3/module3/3; type=string; label=Language file for this module
+locallang_mod3 = LLL:EXT:bw_backendsite/Resources/Private/Language/locallang_mod2.xlf
+
+# cat=mod3/module3/4; type=string; label=Icon to use
+icon_mod3 = EXT:bw_backendsite/Resources/Public/Icons/icon-stop.svg
