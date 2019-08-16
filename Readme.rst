@@ -1,15 +1,24 @@
 BW Backend Site
 ===============
 
-View a part of your tree in the backend.
+.. figure:: Resources/Public/Icons/Extension.svg
+   :size: 100px
 
-Without settings: Show main index of your site
+View a part of your page tree in the backend.
 
-Extension settings: 
+Add project documentation, news for adminstrators and editors with the TYPO3 tools
+you already use.
 
-* Set page ID or URL for all users
+.. figure:: Documentation/Images/UserManual/user-bw_backendsite.png
 
-* _New:_ Set module group to be added to
+
+Highlights: 
+
+* Set a standard page ID or URL for all users
+* Override settings with userTS
+* Set module group to be added to ('user', 'system', 'tools', 'help' or your own)
+* 3 configurable modules for different applications
+* Selectable as start modules in user settings
 
 
 * `github`_ Project page
