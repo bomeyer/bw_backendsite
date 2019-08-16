@@ -9,7 +9,7 @@ Target group: **Administrators**
 Installation
 =============
 
-After installation you can edit the extension settings
+After installation you can edit the extension configuration
 
 * pageID: either an integer value for the page id you want to display or a string
   pointing to an URL of your choice. If you choose the same domain as your
@@ -37,4 +37,26 @@ access to the page, so this page tree must be mounted for them.
 		:alt: Page tree
 
 		A sample page tree
+
+* locallang: Create locallang.xlf files for each module you want to use. TYPO3
+  uses the three entries `mlang_tabs_tab`, `mlang_labels_tablabel` and 
+  `mlang_labels_tabdescr` as shown in the Language folder.
+
+* icon: Add a file to be used as icon to the module. Best to use a SVG file.
+
+Make all pages of Doktype "Backend" to exclude the pages from public view.
+
+You may add any Content Element or Plugin to your Backend pages.
+
+
+Configuration
+=======================
+
+Additionally, you may override settings with userTS (may cascade through groups)
+for setting a different page to display for each group or user.
+
+.. figure:: Images/AdministratorManual/userTS.png
+		:alt: User Typoscript override
+
+		Override in userTS (groupTS)
 

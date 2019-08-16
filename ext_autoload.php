@@ -7,4 +7,3 @@
 return array(
 	'tx_bwbackendsite_mod1'	=> \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath('bw_backendsite'). 'mod1/class.tx_bwbackendsite_mod1.php',
 );
-?>

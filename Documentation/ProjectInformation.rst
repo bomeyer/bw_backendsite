@@ -2,33 +2,50 @@
 Project Information
 =====================
 
-Give `general information`_ about the project:
+This is a simple extension that simply displays a page in the Backend content 
+frame.
 
-* When the project started and under what circumstances?
-* Quote possible sponsors.
-* How can people contribute to the project?
+I wanted to have a means of giving my editors latest information on the state of
+the project, have the Style Guide attached as a download and even have some
+Todo app for them to check off work to be done.
 
-.. _general information: http://forge.typo3.org/projects/typo3v4-official_extension_template
+I imagined that all this functionality is already built into TYPO3, so why not
+use it in the Backend as well?
+
+I asked myself what these "Backend" pages are for and mused that they were exactly
+created for this type of application.
+
 
 Releases
 -----------
 
-* Say where the user can download the `source code`_ of the project.
-* Explain where `stable versions`_ are released.
+Releases are put into TER as well as published on GitHub.
+
+http://github.com/bomeyer/bw_backendsite/releases
+
 
 Bugs and Known Issues
 -----------------------------------
 
-Say where bugs can be reported / followed up. Is it a `Bug Tracker`_? Use this section for informing about any type of of problem that are not necessarily named in the bug tracker such as performance issues, ...
+Bugs, issues and feature request can be put into `Bug Tracker`_
 
-.. _Bug Tracker: http://forge.typo3.org/projects/typo3v4-official_extension_template/issues
+Pull requests are welcome.
+
+.. _Bug Tracker: http://github.com/bomeyer/bw_backendsite/issues
 
 To Do
 -----------
 
-Give a link pointing to a roadmap_. Alternatively, you can dress up a list of things you want to add or fix in this chapter or give a visions what the extension could become with more development.
+Upcoming features are usually put on GitHub as "enhancements", but generally I
+want to add the following plugins to the extension:
 
-.. _roadmap: http://forge.typo3.org/projects/typo3v4-official_extension_template/roadmap
+* Todo list app with Ajax connection (one of the many PHP/Javascript framework
+  samples will do
+* Integration of Trello and/or Microsoft Planner boards
+* Multiple modules, configurable in extension configuration. Different locations,
+  different names, e.g. "Backend help", "Backend news", "Todo list".
+
+.. _roadmap: http://github.com/bomeyer/bw_backendsite/labels/enhancement
 
 
 Change Log
