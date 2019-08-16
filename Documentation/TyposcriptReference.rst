@@ -252,6 +252,34 @@ plugin.tx_bwbackendsite.<property>
 	Default
 		(empty)
 
+.. container:: table-row
+
+	Property
+		module2.pageID
+
+	Data type
+		mixed
+
+	Description
+		Override page uid (if integer) or URL (string) to show.
+
+	Default
+		(empty)
+
+.. container:: table-row
+
+	Property
+		module3.pageID
+
+	Data type
+		mixed
+
+	Description
+		Override page uid (if integer) or URL (string) to show.
+
+	Default
+		(empty)
+
 FAQ
 ====
 
