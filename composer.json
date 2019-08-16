@@ -3,7 +3,7 @@
     "description": "TYPO3 Backend pages",
     "type": "typo3-cms-extension",
 	"homepage": "https://github.com/bomeyer/bw_backendsite",
-    "version": "1.1.0",
+    "version": "1.1.1",
 	"license": "GPL 2.0",
     "support": {
         "issues": "https://github.com/bomeyer/bw_backendsite/issues"
