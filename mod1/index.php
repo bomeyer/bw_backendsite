@@ -103,7 +103,7 @@ class  tx_bwbackendsite_module1 extends TYPO3\CMS\Backend\Module\BaseScriptClass
 			$this->pageinfo = BackendUtility::readPageAccess(intval($id), $this->perms-clause);
 			$access = is_array($this->pageinfo);
 			if ($access || $this->backendUser->user['admin'])
-				header('Location: '.$this->url.'index.php?id='.$id);
+				header('Location: '.$this->url.'/index.php?id='.$id);
 			else
 				$this->content = 'You have no access to the preconfigured page. Please contact the administrator.';
 		} elseif (preg_match('/^https?:\/\//', $id)) {
