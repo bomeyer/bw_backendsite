@@ -17,8 +17,8 @@ namespace BolandWerbung\BwBackendsite\Controller;
 class Module2Controller extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 		
 	public function listAction() {
-		$this->extconf = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['bw_backendsite']);
-		$this->url = dirname(dirname($_SERVER['PHP_SELF']));	// ../typo3
+		$this->extconf = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class)->get('bw_backendsite');
+		$this->prefix = dirname(dirname($_SERVER['PHP_SELF']));	// ../typo3
 		
 		$this->backPath = '../typo3/';
 		$this->backendUser = $GLOBALS['BE_USER'];
@@ -33,7 +33,7 @@ class Module2Controller extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
 			$this->pageinfo = \TYPO3\CMS\Backend\Utility\BackendUtility::readPageAccess(intval($id), $this->perms->clause);
 			$access = is_array($this->pageinfo);
 			if ($access || $this->backendUser->user['admin']) {
-				header('Location: '.$this->url.'index.php?id='.$id);
+				header('Location: '.($this->prefix !== '/'?$this->prefix:'').'/index.php?id='.$id);
 				exit;
 			} else {
 				$this->content = 'You have no access to the preconfigured page. Please contact the administrator.';

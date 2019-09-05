@@ -3,8 +3,8 @@
     "description": "TYPO3 Backend pages",
     "type": "typo3-cms-extension",
 	"homepage": "https://github.com/bomeyer/bw_backendsite",
-    "version": "1.1.1",
-	"license": "GPL 2.0",
+    "version": "1.1.2",
+	"license": "GPL-3.0-or-later",
     "support": {
         "issues": "https://github.com/bomeyer/bw_backendsite/issues"
     },
@@ -16,11 +16,11 @@
     ],
     "require": {
 		"php": ">=7.2.0",
-		"typo3/cms-core": "~8.7.0 || ~9.5.0"
+		"typo3/cms-core": ">=9.5.0"
 	},
 	"autoload": {
 		"psr-4": {
-			"Bw\\Backendsite\\": "Classes/"
+			"BolandWerbung\\BwBackendsite\\": "Classes/"
 		}
 	}
 }

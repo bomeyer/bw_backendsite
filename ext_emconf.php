@@ -28,16 +28,19 @@ $EM_CONF[$_EXTKEY] = array(
 	'clearCacheOnLoad' => 0,
 	'lockType' => '',
 	'author_company' => '',
-	'version' => '1.1.1',
+	'version' => '1.1.2',
 	'constraints' => array(
 		'depends' => array(
-			'typo3' => '8.7.0-9.99.99'
+			'typo3' => '9.5.0-9.5.99'
 		),
 		'conflicts' => array(
 		),
 		'suggests' => array(
 		),
+	),
+	'autoload' => array(
+		'psr-4' => array(
+			'BolandWerbung\\BwBackendsite\\' => 'Classes'
+		)
 	)
 );
-
-?>

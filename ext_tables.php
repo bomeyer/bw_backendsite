@@ -3,7 +3,7 @@ if (!defined ('TYPO3_MODE')) {
 	die ('Access denied.');
 }
 if (TYPO3_MODE == 'BE') {
-	$myextconf = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['bw_backendsite']);
+	$myextconf = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class)->get('bw_backendsite');
 	
 	if ($myextconf['pageID']) {
 		\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerModule(
