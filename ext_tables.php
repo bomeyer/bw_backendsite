@@ -12,7 +12,7 @@ if (TYPO3_MODE == 'BE') {
 			'm1',
 			'',
 			[
-                'Module' => 'index'
+                \BolandWerbung\BwBackendsite\Controller\ModuleController::class => 'index'
 			],
 			[
 				'access' => 'user,group',
@@ -29,7 +29,7 @@ if (TYPO3_MODE == 'BE') {
 			'm2',
 			'',
 			[
-				'Module2' => 'index'
+				\BolandWerbung\BwBackendsite\Controller\Module2Controller::class => 'index'
 			],
 			[
 				'access' => 'user,group',
@@ -46,7 +46,7 @@ if (TYPO3_MODE == 'BE') {
 			'm3',
 			'',
 			[
-				'Module3' => 'index'
+            \BolandWerbung\BwBackendsite\Controller\Module3Controller::class => 'index'
 			],
 			[
 				'access' => 'user,group',
