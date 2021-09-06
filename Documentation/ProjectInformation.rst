@@ -42,8 +42,6 @@ want to add the following plugins to the extension:
 * Todo list app with Ajax connection (one of the many PHP/Javascript framework
   samples will do
 * Integration of Trello and/or Microsoft Planner boards
-* Multiple modules, configurable in extension configuration. Different locations,
-  different names, e.g. "Backend help", "Backend news", "Todo list".
 
 .. _roadmap: http://github.com/bomeyer/bw_backendsite/labels/enhancement
 

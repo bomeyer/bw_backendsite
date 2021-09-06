@@ -13,11 +13,11 @@ Extension Name
 
 :Extension name: BW Backend Site
 :Extension key: bw_backendsite
-:Version: 1.1.0
+:Version: 1.2.0
 :Description: manuals covering TYPO3 extension "BW Backend Site"
 :Language: en
 :Author: Mark Boland
-:Creation: 2015-06-23
+:Creation: 2021-09-06
 :Generation: 12:19
 :Licence: Open Content License available from `www.opencontent.org/opl.shtml <http://www.opencontent.org/opl.shtml>`_
 
@@ -42,6 +42,7 @@ The content of this document is related to TYPO3, a GNU/GPL CMS/Framework availa
 	@todo: explain what files should be versionned and what not (_build, Makefile, conf.py, ...)
 
 .. include:: ../Readme.rst
+
 
 What does it do?
 =================

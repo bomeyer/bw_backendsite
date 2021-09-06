@@ -12,7 +12,7 @@ if (TYPO3_MODE == 'BE') {
 			'm1',
 			'',
 			[
-				'Module' => 'list'
+                'Module' => 'index'
 			],
 			[
 				'access' => 'user,group',
@@ -29,7 +29,7 @@ if (TYPO3_MODE == 'BE') {
 			'm2',
 			'',
 			[
-				'Module2' => 'list'
+				'Module2' => 'index'
 			],
 			[
 				'access' => 'user,group',
@@ -46,7 +46,7 @@ if (TYPO3_MODE == 'BE') {
 			'm3',
 			'',
 			[
-				'Module3' => 'list'
+				'Module3' => 'index'
 			],
 			[
 				'access' => 'user,group',

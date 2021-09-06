@@ -59,3 +59,14 @@ for setting a different page to display for each group or user.
 		:alt: User Typoscript override
 
 		Override in userTS (groupTS)
+
+
+Customization
+=============
+
+Starting from version 1.2.0, the extension is using a Fluid template to render
+the iFrame element by itself. Now you are able to customize the rendering, e.g.
+adding elements to the control bar in the user module like a title, buttons or
+shortcuts. Please note that only the start page is rendered this way. All
+subsequent pages are rendered in the same frame and can't change contents of the
+control bar.

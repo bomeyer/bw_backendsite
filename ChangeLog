@@ -1,3 +1,8 @@
+2021-09-06 - Mark Boland <mark.boland@boland.de> - v1.1.3
+
+    * Now rendering with backend fluid template to re-enable scrolling (issue #8)
+
+
 2019-08-15 - Mark Boland <mark.boland@boland.de> - v1.1.0
 
 	* Compatible with 8.7 and 9.5
