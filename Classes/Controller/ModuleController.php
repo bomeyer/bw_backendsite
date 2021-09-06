@@ -1,9 +1,10 @@
 <?php
 
+namespace BolandWerbung\BwBackendsite\Controller;
+
 use TYPO3\CMS\Backend\Module\BaseScriptClass;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
-namespace BolandWerbung\BwBackendsite\Controller;
 
 /***************************************************************
  *  Copyright notice
@@ -26,7 +27,7 @@ class ModuleController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
 //		$this->backPath = '../typo3/';
 		$this->backendUser = $GLOBALS['BE_USER'];
 		
-		$id = $this->backendUser->userTS['plugin.']['tx_bwbackendsite.']['pageID']?$this->backendUser->userTS['plugin.']['tx_bwbackendsite.']['pageID']:$this->extconf['pageID'];
+		$id = isset($this->backendUser->userTS) && isset($this->backendUser->userTS['plugin.']['tx_bwbackendsite.']['pageID'])?$this->backendUser->userTS['plugin.']['tx_bwbackendsite.']['pageID']:$this->extconf['pageID'];
 		
 		if (intval($id) || !$id) {	// if numeric or not set
 			$id = $id?intval($id):1;	// a valid numeric or first page (uid = 1)
