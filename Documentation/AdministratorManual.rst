@@ -1,4 +1,4 @@
-﻿============================
+============================
 Administrator Manual
 ============================
 
@@ -70,3 +70,107 @@ adding elements to the control bar in the user module like a title, buttons or
 shortcuts. Please note that only the start page is rendered this way. All
 subsequent pages are rendered in the same frame and can't change contents of the
 control bar.
+
+
+Embedding tools
+===============
+
+There are some planning and communication tools that allow you to embed web views
+into your pages. This way all of your collegues can keep up-to-date.
+
+
+Google Docs
+-----------
+
+You can easily embed any Google Docs document like texts, spreadsheets and presentations using the standard HTML content element:
+
+.. code-block:  HTML
+
+    <iframe src="https://docs.google.com/document/d/..." style="width:100%;height:800px;border:none"></iframe>
+
+
+Trello
+------
+
+Go to `Trello Boards`_ or `Trello Cards`_ for a method to embed shortcuts to your 
+team's Trello boards. While you are not able to embed whole boards you can show
+a list of thumbnails representing boards the current user has access to.
+
+
+Example
+=======
+
+For a basic setup you may start by adding the TS template below to the root page of this example page tree:
+
+.. figure:: Images/AdministratorManual/example-pagetree.png
+    :alt: Page tree
+
+    A sample page tree with a public homepage and 3 separate backend page trees
+
+
+
+.. code-block::  TypoScript
+
+    # Default PAGE object:
+    page = PAGE
+
+    # Simple stylesheet
+    page.10 = TEXT
+    page.10.value (
+      <style>
+      body { font-family: Source, Arial, Helvetica, sans-serif; font-size: 15px; }
+      h1, h2, h3, h4, h5, h6 { color: #666; }
+      .band { background-color: steelblue; width: 100%; overflow: hidden; vertical-align: bottom; }
+      .band .title { float:left; font-size: 2em; font-weight: bold; color: white; margin: 10px 20px }
+      .band .roottitle { float: right; font-size: 1.2em; color: white; margin: 10px 20px }
+      nav.main { border-bottom: 2px solid steelblue; }
+      nav.main > ul { padding: none; margin-left: 0; }
+      nav.main > ul > li { display: inline-block; margin-right: 20px;}
+      </style>
+    )
+
+    # Simple local menu
+    page.30 = HMENU
+    page.30 {
+      # adjust this to the entry level of your backend pages
+      entryLevel = 1
+
+      # don't exclude backend user pages (type 6) in this case
+      excludeDoktypes = 7
+
+      wrap = <nav class="main"><ul>|</ul></nav>
+      1 = TMENU
+      1 {
+        NO = 1
+        NO {
+          linkWrap = <li>|</li>
+        }
+        CUR = 1
+        CUR {
+          linkWrap = <li><strong>|</strong></li>
+        }
+      }
+    }
+
+    # Title bar with title of current page and title of root page of this branch
+    page.20 = COA
+    page.20 {
+      wrap = <div class="band">|</div>
+      10 = TEXT
+      10.wrap = <span class="title">|</span>
+      10.insertData = 1
+      10.field = title
+
+      20 = TEXT
+      20.wrap = <span class="roottitle">|</span>
+      20.data = LEVELTITLE:1
+    }
+
+    # Page content
+    page.50 = CONTENT
+    page.50 < styles.content.get
+
+
+.. _Trello Boards: https://developer.atlassian.com/cloud/trello/guides/embedding/embedding-boards/
+
+.. _Trello Cards: https://developer.atlassian.com/cloud/trello/guides/embedding/embedding-cards/

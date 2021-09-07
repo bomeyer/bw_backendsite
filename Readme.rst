@@ -2,7 +2,7 @@ BW Backend Site
 ===============
 
 .. figure:: Resources/Public/Icons/Extension.svg
-   :size: 100px
+   :width: 100px
 
 View a part of your page tree in the backend.
 

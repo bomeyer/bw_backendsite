@@ -8,7 +8,7 @@
 .. include:: _IncludedDirectives.rst
 
 =================
-Extension Name
+Backend Site
 =================
 
 :Extension name: BW Backend Site
@@ -34,7 +34,6 @@ The content of this document is related to TYPO3, a GNU/GPL CMS/Framework availa
 	AdministratorManual
 	TyposcriptReference
 	DeveloperCorner
-	RestructuredtextHelp
 
 .. STILL TO ADD IN THIS DOCUMENT
 	@todo: add section about how screenshots can be automated. Pointer to PhantomJS could be added.

@@ -14,7 +14,7 @@ even more. Don't forget to add a registerModule call to ext_tables.php for each 
 Hooks
 =======
 
-There are no hooks. Simply not enough code to add some.
+There are no hooks. There is simply not enough code to add some.
 
 
 
@@ -27,7 +27,7 @@ Version 1.2.0
 In version 1.2.0 the rendering was changed to use Fluid templates. This enables
 the extension to render the iFrame element by itself. This leaves a small border 
 around the content colored by the TYPO3 backend style sheet. You may have to 
-either chnage the default background color of TYPO3 or your backend pages 
+either change the default background color of TYPO3 or your backend pages 
 template to adjust to this.
 
 The default action for the modules were changed to 'Index' rather than 'List'.
